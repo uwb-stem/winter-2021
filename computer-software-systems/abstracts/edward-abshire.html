@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Edward Abshire</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Improving Novice Developer Feedback</h1>
+
+            <!-- Project type -->
+            <h2>UWB CSS Faculty Research</h2>
+            <h2>Advisor: Dr. Yusuf Pisan</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract-left"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "One of the most challenging aspects for a novice developer is receiving feedback in a timely manner.  Are they using the correct coding style?  Does their code function as expected?  The feedback can help the developer stay motivated and focused as they write their code.  However, novice developers face multiple challenges in getting feedback:";
+            input = input.concat("<ul><li>Tools commonly used for feedback are often complex and require additional expertise to setup</li>");
+            input = input.concat("<li>The development environment may not have all the proper tools installed</li>");
+            input = input.concat("<li>Feedback from peers, or from their professors in the context of a course, is often delayed and is often not sufficiently detailed</li></ul>");
+            input = input.concat("All of these are issues can hinder and frustrate a student interfering with their learning as they develop their programming skills.In Tech for Good, we are looking at how we can improve this feedback process.  The goal of this capstone project is to explore tools for providing rapid, automated, and consistent feedback to novice developers. We have specifically focused on implementing an easy-to-use process to facilitate the adoption of tools with minimal effort for students and professors.Continuous integration, continuous deployment is a widespread industrial practice in software development. We used existing tools, such as GitHub, to create a pipeline for rapid feedback on programs. We applied this pipeline to actual classroom assignments as examples.  We demonstrated that static code analysis and unit-tests could be completed in under three minutes.We are currently working on documenting the process for wider adoption and testing it with a larger set of examples. When operation, the system will be usable in 100 and 200 programming courses to provide feedback to students. The feedback will help improve code quality as well as exposing students to standard industry software development tools and practices.");
+
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract-left").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/edward-abshire.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/edward-abshire.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

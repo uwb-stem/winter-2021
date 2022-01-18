@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>David Liu</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Your Interests</h1>
+
+            <!-- Project type -->
+            <h2>Individual Project - Student Defined</h2>
+            <h2>Advisor: Dr. Dr. Afra Mashhadi</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "During a pandemic which causes the whole world to fall in a state of lockdown, there may be little opportunity to try new opportunities. Market research companies charge high rates to collect and market products based on your user information. The application I've developed is simple to use, requires no user registration, doesn't collect any information, and is free of charge. Utilizing general information available on social media platforms I've implemented a way to predict a customers interest via the Apriori algorithm. By garnering a large and relevant dataset from user profiles, the algorithm predicts user interest based on a statistical model of what previous users are already interested in. The web application I've developed encapsulates all these characteristics in a hassle free experience to serve your best interests in mind both privately and generally.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/david-liu.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/david-liu.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

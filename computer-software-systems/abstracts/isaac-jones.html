@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Isaac Jones</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Software Development Internship with Data I/O</h1>
+
+            <!-- Project type -->
+            <h2>Data I/O</h2>
+            <h2>Advisor: Dr. William Erdly</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "In this internship I conceived and developed both a format for, and a utility for upgrading to said format, configuration parameters for a pick-and-place flash memory programmer machine. This was done because the machine (and others in the future) is having its interface software redesigned, and the old method for storing parameters is cumbersome, archaic, prone to errors, and is not modifiable, only appendable, and therefore old parameters become permanently registered into the system. As all current customers are utilizing this old format, it is necessary to write a utility to upgrade their old data to the new format.The result of my work is a utility which can parse any parameter file into standard xml with the ability to read any collection of valid lines and parse them into the correct data, all while skipping any corrupted information and applying default values to unfound parameters. Furthermore, it checks values against attributes, performs localization, generates localization data automatically, and implements immaculate file care with incremental backups and only necessary file movement. My work on the parameter structure has resulted in a system which requires minimal developmental effort to implement changes, or replicate for a new system, all the while being as robust and as safe as possible and providing the maximum amount of features. It is highly extendable and is built to last well into the future.This work is significant because it is the first critical step in moving a number of multi-million dollar customers over to my company's new software. It is also being used right now to continue the development of the new interface software, as development has reached the phase where these parameters are now required in the codebase. This work lays the foundation for how all system parameter data is handled for the entire software.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/isaac-jones.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/isaac-jones.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

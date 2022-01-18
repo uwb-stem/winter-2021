@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Samuel Munford</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Online Learning for Technical Interviews</h1>
+
+            <!-- Project type -->
+            <h2>UWB CSS Faculty Research</h2>
+            <h2>Advisor: Dr. Yusuf Pisan</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "Due to the global pandemic there has been a lot of uncertainty as to how businesses will function for the foreseeable future. Hiring is down across the board with entry-level job posting on Glassdoor being down 68%. There's even concern among those currently employed about their positions within the company, especially with start-ups. With these factors it's incredibly important for those finishing their degree to be prepared for the added stress that comes with taking a technical interview. <br/><br/>In the Tech for Good research team we are working to address this issue to provide better technical interview preparation for computer science students. There are several websites that provide practice coding problems. My team focuses on the Leetcode web site and converts practice questions into in-depth lessons. Our goal is to assist students develop a deeper understanding of these problems by highlighting code efficiency, memory usage, and alternative data structures that can be used. Our lessons provide a step-by-step approach to help students become better problem solvers.Currently our team has over 100 lessons completed on our Stepik lesson page covering multiple categories, data structures, and difficulty levels. We also have put in place weekly workshops to CSS 342 students in order to get additional feedback for the lessons we have compiled. Formal computer science courses at the University of Washington Bothell provide the theoretical framework of students to learn. This project supplements student's knowledge through problem-solving activities to better prepare students for the skills and mindset they will need for technical interviews.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/samuel-munford.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/samuel-munford.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

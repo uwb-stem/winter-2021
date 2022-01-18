@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Madhav Rajkondawar</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Software Engineer Intern at Open Water Accelerator</h1>
+
+            <!-- Project type -->
+            <h2>Open Water Accelerator</h2>
+            <h2>Advisor: Dr. Arnold Lund</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "In Fall 2020, I did my capstone for a portfolio startup named Plutus. Plutus is a platform for amateur investors to learn and grow their money with experienced fund managers. During this remote internship, I worked on the engineering and product team. My responsibility was to develop the main web application for the company from ground up, which incorporated all the different features that we finalized through product ideation and different user research techniques. We used React for frontend code, Django REST framework for backend implementation, PostgreSQL for databases, and AWS for deployment of our code. <br/><br/>The purpose of the website was to allow a wide range of investors, from amateur to experienced, to establish a community and work together on investment. Our application would allow them to join a big community to treat it as a bible for investing, meet cool friends to start investing together, and create a large portfolio to learn investment. We chose to use Django because when we deploy the Django app to AWS, the root of the AWS deployment would take the user to our website and the api route would for developers, making the frontend and backend work together with great cohesion. It was a full-stack application which utilized React for frontend, Django + PostgreSQL for backend implementation and applied the entire Software Development Life Cycle process.<br/><br/>By the end of the internship, I successfully built the official website for our company, with all the different features we discussed with the product team. Our main page has general information like our company name, our mission, information about our product and a sign-in/sign-up page for the user. After logging in, the user can go to their profile page and access information about their portfolios, bio/description, and explore the communities tab for checking out different communities they are a part of or want to join. They can also use the search function to look for other investors or click on other fund managers' profiles to know more about them. This way, people are now able to sign-in to the application, join different communities, check out interesting, certified profiles of experienced investors, and increase their network while learning investment! The website is complete but has not been formally deployed yet, since our team is deciding whether to purchase the AWS domain name for our website to deploy our api as well as our finished website. ";
+            
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/madhav-rajkondawar.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/madhav-rajkondawar.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

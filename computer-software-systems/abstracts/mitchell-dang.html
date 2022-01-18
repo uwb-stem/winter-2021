@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <h1>Mitchell Dang</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Web Development Internship</h1>
+
+            <h2>KyFlex</h2>
+            <h2>Advisor: Dr. Yusuf Pisan</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract -->
+        <script >
+            let input = "KyFlex is a rising startup in Columbus, Ohio that provides a cross-platform web application that buying and selling virtual experiences in the form of services or activities. Experience can be soccer training, software training, etc. The business model is similar to Airbnb, but more experience focused.<br></br>The goal of my internship at KyFlex was to improve the current UI/UX to make it more intuitive and engaging, collaborate with frontend and backend team to implement new designs for Payment & Customer's Profile, write, test, and document manageable and scalable code.<br></br>My initial task at KyFlex focused on learning about the frontend team, revising and designing initial interfaces for upcoming features using Figma, setting up the environment and learning to navigate the codebase. As I mastered the tools, I started contributing directly to the final product and implemented new features for customer profile, bookings and payment processing. Although I was part of the frontend team, I also collaborated with backend developers in implementing functionality. I reported two critical bugs, where the system would fail to load valid data, to the backend team.<br></br>Working with a small team of talented engineers and experts in a fast-paced environment, I learned valuable knowledge in leadership, software development life cycles (SDLC) as well as knowledge in frontend and backend development. As part of testing and deploying new features, I was exposed, and learned to work with software development tools, such as Git, Docker and the Django framework. While software development during the pandemic has been challenging, my team was able to take advantage of having people in different time zones, to collaborate effectively and release features on time.I enjoyed my experience and my team at KyFlex. During the internship, I was able to understand more about my strength as well as opportunities to improve my skills in software development.";
+            
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let foundstr = found.toString();
+            let linebreak = ".<br/><br/>"
+            let replacement = linebreak.concat(foundstr.substr(-1)) ;
+            
+            let output = input.replace(regex, replacement);
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/mitchell-dang.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/mitchell-dang.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Silver Lucoris</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Finding Brain Bleed in Ultrasound Images</h1>
+
+            <!-- Project type -->
+            <h2>Prof. Pierre Mourad</h2>
+            <h2>Advisor: Dr. Erika Parsons</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "This capstone is part of a research project that aims to help find blood around the brain using ultrasound images. The task was to create a model that took the ultrasound images formatted as a set of Fourier transforms on a sound wave as an input and outputting where in the images the bleed exists. The output is a probability distribution at every pixel. This model will eventually be used by practitioners in the field to determine if patients in battlefield settings have a chance of survival. If there is too much blood in their brain, there is little to no chance of survival after injury but if there is no blood, there is a high chance of survival.As part of my work, I was able to create an algorithm that outperformed all other algorithms previously generated. I was able to identify many instances of bleed around the skull but identifying bleeds within the brain consistently has been more challenging.  In addition I developed multiple algorithms that had varying levels of success based on successful performances on major benchmark datasets like ImageNet.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/silver-lucoris.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/silver-lucoris.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

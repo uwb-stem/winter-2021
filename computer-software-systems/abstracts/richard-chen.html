@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Richard Chen</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>2D Game Development & Design - The Interview</h1>
+
+            <!-- Project type -->
+            <h2>Individual Project - Student Defined</h2>
+            <h2>Advisor: Dr. Afra Mashhadi</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "For my capstone individual project, the primary goal was to develop a 2D platformer video game that aims to help people who do not have any experience in programming to learn how to code, people who are currently learning how to code can also get to practice and improve their programming skills by playing this game. This project was inspired by those educational games we see online, which let the players learn and grow the knowledge in certain aspects while having fun playing the game, and I wanted to bring this idea of learning while playing into the game project that I wanted to make so the players will be able to learn the programming concepts and as well as improve their coding abilities in a fun and entertaining way. This game project was developed in C# by using the Unity Game Engine. In combining the knowledge I gained from the CSS 385 game development class and the coding concepts I learned from the past programming courses, I managed to design and was able to build an interactive coding learning game with unique gameplay mechanics, rules, and arts. The user feedback was also collected during the development process, any suggested improvements and changes were implemented in this game project accordingly during the playtesting.The result of this game project is successful and fun to play, it has various coding concepts that take place in each different game level. Starts from the basic coding concepts and all the way to the advanced coding concepts at the end, the player will be able to enjoy playing the game, as well as learning and practicing their programming skills abilities by completing the levels. Through doing this game project, I was able to expand my knowledge in game development and have gained a better understanding of how to properly balance and design the game so the player would feel fun and enjoy it.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/richard-chen.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/richard-chen.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

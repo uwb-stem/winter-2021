@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Collen Cruz</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Restaurant Database and Web Development</h1>
+
+            <!-- Project type -->
+            <h2>Individual Project - Student Defined</h2>
+            <h2>Advisor: Dr. Jeffery Kim</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "Noble Palace is a locally owned restaurant in the city of Marysville and due to the pandemic, they have made necessary changes to many aspects of their business. However, these changes are unannounced to their customer base leading to multiple accounts of misinformation. This project is designed to provide Noble Palace clarity while simultaneously adding scalability to their business through the design, implementation, and deployment of a dedicated database and personalized website. The website intends to provide customers with all the necessary information needed as well as additional functionality that may prove to be useful to their users, all while maintaining customer convenience. The outcome of this project has produced a website utilizing a dual database design implemented with HTML, CSS, PHP, SQL, and Javascript.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/collen-cruz.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/collen-cruz.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

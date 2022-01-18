@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Jordan Quigtar & Temesgen Habte</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>MyEarlyLearner: Parent Help Application</h1>
+
+            <!-- Project type -->
+            <h2>Group Project - Student Defined</h2>
+            <h2>Advisor: Dr. Robert Dimpsey</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "Our capstone was helping a client build a functioning mobile application from his own idea from a class in a graduate program at UW Seattle. He started the process for us already by interviewing possible users and refining the functional requirements as part of his class project. He also has a lot of documentation on this. For us the capstone project was picking up where he left off and developing the actual mobile applicationThe application itself is a mobile application for expecting parents, young parents, and parents of younger children to find resources when searching for advice on child care, as well as other resources a parent may otherwise look for on the internet. The original idea for MyEarlyLearner was created to centralize all of the information a new parent needs to be successful. Overall, the application looks to provide parents an extra resource.We decided to program the app on React Native with Expo for efficiency and rapid prototyping. For our development methods we went with Scrum and used GitHub to handle version control while maintaining our goals for each sprint with Trello. For the app's articles and media we utilized the CDC's RESTful API to pull articles, pictures, and videos directly from a reliable source, allowing the parents (users) to have a sense of trust and security when using our app. To authenticate users in-app, we used AWS Amplify, allowing up to 50,000 users in their free tier. We both had to learn how to code in JavaScript for this project, as well as improve in using GitHub. We gained real experience with Scrum development and working with a client's design ideas and translating them to functional and non-functional requirements. In summary, we gained experience that is vital to working in the industry.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/quigtar-habte.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/quigtar-habte.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Maxwell Wenger</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Comparing Distributed Computing Techniques for Geometric and Combinatoric Simulations</h1>
+
+            <!-- Project type -->
+            <h2>UWB CSS Faculty Research</h2>
+            <h2>Advisor: Dr. Munehiro Fukuda</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract-left"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "The Distributed Systems Laboratory (DSL) is working on a new library that provides end users with the ability to easily create spacial simulations called Multi-Agent Spatial Simulation (MAAS). Examples of applications that make use of spacial simulation include tracking pandemic outbreaks, neural network simulation, biological population simulations, climate and weather based simulations, and any other field that can be modeled as a network or a set of agents. In building MAAS, we want to ensure that we are competitive in both performance and programmability with other libraries on the market now."
+            input = input.concat(" <br/><br/>I was tasked with building two different styles of algorithms (geometric and combinatoric/network-based) in multiple competing libraries to compare MASS against using performance and both qualitative and quantitative programmability metrics.");
+            input = input.concat(" <br/><br/>We chose platforms that did their computations based on different types of migration. JCilk for thread migration, Repast Simphony for Agent Based Modeling (ABM), Java Aglets for intelligent software agents, and so on.");
+            
+            input = input.concat(" <br/><br/>We chose to evaluate these programs using two common problems:");
+            input = input.concat(" <ol><li>Triangles in a graph (TC). This is used to model a graph problem where nodes in a graph would need to be traversed.</li>");
+            input = input.concat(" <li>Closest pair of points (CPP). This was used to simulate a computationally heavy geometric problem.</li></ol>");
+
+            input = input.concat(" Through my evaluations, I was able to establish that MASS performed the best of all the agent based modeling platforms, and often times performed better than the other types of migration-based simulation tools. The times that MASS was outperformed, CPP on aglets for example, it would be because there was a better algorithm available. In the case of aglets vs MASS, aglets was able to use a well established algorithm to do the raw computations using the divide and concur approach, where MASS modeled the interactions between agents.");
+            input = input.concat(" <br/><br/>I was also able to establish that MASS has the best programmability too, as I ran into many issues with other platforms while writing them, and even getting some to run on the lab computers. MASS also further improves on its programmability with its use of java annotations which was just recently introduced, and has made it even easier to write to.");
+            input = input.concat(" <br/><br/>These results are extremely significant as our DSL was able to produce a new and innovative ABM toolset that outperforms not only other leading ABM tools, but many other migration tools. We will also be able to present this research at PAAMS 2021 (Practical Applications of Agents and Multi-Agent Systems).");
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract-left").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/maxwell-wenger.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/maxwell-wenger.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Genny Brown</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Database Creation for Future Students</h1>
+
+            <!-- Project type -->
+            <h2>UWB CSS Faculty Research</h2>
+            <h2>Advisor: Mr. Mark Kochanski</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "This capstone focused on creating three databases to be used by students enrolled in CSS 475 Database Systems. The databases were created in two different development environments, Microsoft Access, and MySQL Workbench to ensure that all students would be able to have access to them. Microsoft Access is included in all Window operating systems. MySQL Workbench Community version can be downloaded from the internet for free. The databases were then filled with meaningful data to ensure that there are results to each of the queries. Additionally, a list of example queries was provided by the capstone advisor and some of the answers were rewritten by the capstone creator to match the data in the databases.As a student of CSS 475, it is usually the first-time students have been introduced to thinking in terms of data and tables instead of object-oriented and some students struggle to make the switch. By providing the students databases to check their queries with, it allows them to build confidence in their ability to correctly design queries on their own and in their own time. The databases may also serve as a tool to study for exams, which will add to their confidence and could reduce stress around exams. Adding these databases to the arsenal of tools provided to the students of CSS 475 will help make the experience more enjoyable for all students who take the time to use them. ";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/genny-brown.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/genny-brown.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

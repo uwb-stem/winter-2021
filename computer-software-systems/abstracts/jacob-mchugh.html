@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Jacob McHugh</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Process Automation</h1>
+
+            <!-- Project type -->
+            <h2>UWB CSS Faculty Research</h2>
+            <h2>Advisor: Dr. Hazel Asuncion</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "The research team that I was assigned to was generating SPARQL queries on code bases to detect UML design patterns from the code. They had a method for running SPARQL queries but could only run the queries one at a time, sometimes they took hours and had to be left overnight. This was an inefficient method when trying to detect hundreds of patterns and pattern variants. There was another need to generate reports which took time to write and data had to be extracted from multiple query result files.<br></br>I needed to create a tool that would automatically run each SPARQL query, one after another as the user specified on a 'NT' file, which another team member had generated from a codebase. To accomplish this I used a JSON format file to map the directory of queries and each query I wanted to run, with an associated filename. I decided the program would be a command line app written in JAVA. I then familiarized myself with the 'Apache-Jena' JAVA library which had a SPARQL query parser and query iterators to read results. As well as the 'simple json' JAVA library, to handle JSON files. First the results would print a report to the screen, then later I designed a way to save the results to a file. After consulting with team members we determined that the best file format for the report would be a 'CSV' file, which would make it easier to view as a spreadsheet. After a few more iterations, having worked with team members that would read the reports, we finalized the report structure having both a basic and advanced report that would be generated as well as a file with the raw query results for reference.<br></br>I estimate that running the queries with my tool reduced the amount of hours of labor that the research team had to commit by a ratio of 20/1. Due to the reduction from running queries for multiple days, to just mapping the queries in a JSON file. In addition the program can be ran in the background and other processes can be performed.The tool that I created alleviated stress, labor hours and mindpower that could be spent elsewhere. In full confidence I believe that my tool will greatly increase the productivity of the research team.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/jacob-mchugh.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/jacob-mchugh.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

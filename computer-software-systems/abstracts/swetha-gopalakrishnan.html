@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Swetha Gopalakrishna</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Colloquial</h1>
+
+            <!-- Project type -->
+            <h2>Individual Project - Student Defined</h2>
+            <h2>Advisor: Dr. William Erdly</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "Colloquial is a mobile application that provides language learners supplemental material in their language learning journey. This material includes books, songs, movies, and tv shows that allow language learners to experience the language colloquially. Media is available in Spanish, German, Italian, French, Dutch and Portuguese. Users can filter media based on genre and bookmark media, which can also be sorted by most recent and in alphabetical order. Additionally, users can read and write reviews about media. They can also chat with other users and make changes to their profile, such as changing their password and deleting. Through the prototyping tool Figma, the working prototype for Colloquial was created. This was then converted to React Native with the backend supported by Firebase. The goal of Colloquial is to provide access to media that will interest the reader in continuing their language learning journey as well as give them experience with language as it exists in the real world. ";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/swetha-gopalakrishnan.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/swetha-gopalakrishnan.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

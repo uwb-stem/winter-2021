@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Bisrat Asefaw & Eduardo Padilla Ponce Deleon</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Dex Homeless Shelter Site</h1>
+
+            <!-- Project type -->
+            <h2>Group Project - Student Defined</h2>
+            <h2>Advisor: Dr. Arnold Lund</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "Our website MyShelter was developed to overcome thedifficulties that homeless people andhomeless shelters faced during covid-19 pandemic anddistorted air condition. We follow agiledevelopment methodology to produce the final versionof our website. Our website isimplemented to provide the required social distancingduring covid-19 by providing an onlineservice to fill out basic forms. It allows homelessshelter workers to track and put covid-19positive people on hold before joining the homelessshelter. It provides information about anyhomeless shelter, and allows homeless people to usetheir zip code to find the closest shelter. Ourwebsite also provides a messaging system that allowsa caseworker and homeless person tocommunicate, get an update on a housing waitlist andread important news and notifications. Onthe employee view, our website provides a searchingbox that allows the manager of thehomeless shelter to view the communication/interactionbetween a homeless person andcaseworker.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/asefaw-deleon.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/asefaw-deleon.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Luca Della Valentina</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Condensing T-Mobile's Call Routing System to a Simple, Automated Dashboard</h1>
+
+            <!-- Project type -->
+            <h2>T-Mobile</h2>
+            <h2>Advisor: Dr. Laurie Anderson</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "I worked at T-Mobile as a part time TechX intern in Contact Center Technologies Design. My team involved three other Software Engineers on a project to help call center support teams visualize how calls route. To replace the previously used 20 year old excel document, I created a script and schema to extract information about call scripts that puts data on a custom language visualization. After my capstone and internship, I will be transitioning on the team to work full time on this project, expanding to many other potential uses for call routing information. Rather than going into the T-Mobile headquarters, this internship took place completely remote, adding to the difficulty of coordinating tasks between various people.While not fully finished, the visualization and ability to extract call routing information will greatly aid in simplifying complex phone trees, as well as troubleshooting existing call routing issues. This will save numerous hours for our team and call center teams. The script was created in C# using Visual Studio, while the schema is an SQL relational database. Front end and middle end languages were custom written using web assembly by my coworker and adapted with added functionality to this project.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/luca-della-valentina.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/luca-della-valentina.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

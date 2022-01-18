@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Oscar Morales</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Web Service for Cataloginh Machine Learning Inference Results</h1>
+
+            <!-- Project type -->
+            <h2>UWB CSS Faculty Research</h2>
+            <h2>Advisor: Dr. Yang Peng</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "Machine  learning  inference  results  are  often  buried  deep  in  the  results  sections  of  academic  papers  or  presented  in  industry whitepapers. The siloed nature of these results makes broad comparisons between machine learning frameworks and models difficult. In this capstone project, we developed a web service called MLib, which can run user-submitted models in situ against a common benchmark and builds a database of the results. Users of this web service can register and securely log in to their accounts to upload their own models. Then, they can choose between Tensorflow and PyTorch as the framework to run their models  and  view  the  benchmarks  stored  in  a  MySQL  database.  This  database  also  stores  user  information  and  secures  their accounts by using a password salt. Finally, users can filter the results by framework, device, and model and download the models they are interested in based on the model's performance on the accuracy, throughput, and memory footprint. Running models in situ ensures that results are as comparable as possible since each inference occurs in the same execution environment and against the same benchmark. Machine learning practitioners embarking on a new project can use the results on MLib to guide their initial framework and model selection or compare results against similar models.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/Oscar-Morales-1.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/Oscar-Morales-1.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

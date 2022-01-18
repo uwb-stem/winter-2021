@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Andrew Goupinets</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Learn Music with Andrew: Building a Mobile Application</h1>
+
+            <!-- Project type -->
+            <h2>Individual Project - Student Defined</h2>
+            <h2>Advisor: Mr. Alan Leong</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "For the past 9 weeks, I worked by myself to develop a mobile application that could be utilized in my own business as a complementary teaching tool for music. This mobile application was built using Xamarin technology provided by Microsoft, and encompassed many stages in its life including research, design, development, and testing. Following the advice of my faculty advisor and sponsors throughout this project, I brought the application to life feature by feature, and after these 9 weeks have a working alpha build of the product that demonstrates all the main features that this app will feature on full release in the future. My work on this project has helped me understand how mobile development works and has laid the foundation on which I will work on future developments, first and foremostly including bringing this app to the market.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/andrew-goupinets.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/andrew-goupinets.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

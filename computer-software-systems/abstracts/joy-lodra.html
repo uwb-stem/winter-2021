@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Joy Lodra</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Front End Development Internship at KyFlex</h1>
+
+            <h2>Kyflex</h2>
+            <h2>Dr. Yusuf Pisan</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u><br/>
+            <p id="abstract"></p>            
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "KyFlex is a startup based in Ohio that provides a cross-platform web application for buying and selling virtual experiences in the form of services or activities. <br/><br/>As a front-end developer intern, my primary tasks were to create website mockups using Figma and develop a working website using React.js with the addition of Sass and Bootstrap. Bootstrap provides a library of design components, such as buttons, text boxes, search bars, navigation bars, and many other components with a standard look-and-feel. Implementation in Sass allows the website design to be responsive on multiple devices, including smartphones, tablets, and PCs. <br/><br/>In addition to working on the frontend components, I also collaborated with the backend team to implement functionalities for back-end and front-end connection using Axios framework to make the HTTP requests. The function that we implemented combined the endpoints from the back-end, with the user inputs received from the front-end to be saved. <br/><br/>This internship helped improve my technical skills, learn to work closely with other developers, and improve my communication skills to become a better team player.";
+            
+            // let regex = /\.[A-z]/g;
+            // let found = input.match(regex);
+            // let foundstr = found.toString();
+            // let linebreak = ".<br/><br/>"
+            // let replacement = linebreak.concat(foundstr.substr(-1)) ;
+            
+            let output = input;
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/joy-lodra.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/joy-lodra.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Jadon Combs</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Virtual Academic Advisor An ML-Based Recommender System Architecture</h1>
+
+            <!-- Project type -->
+            <h2>UWB CSS Faculty Research</h2>
+            <h2>Advisor: Dr. Erika Parsons</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "Currently, academic scheduling is considered an NP-Hard problem due to its combinatorial when finding an optimal schedule for a student. It is performed manually by academic advisors and students--an activity that can be tedious, stressful, and time-consuming. Current solutions exist; however, these lack the flexibility and adoptability needed for standardized usage among many institutions. Difficulties in development with the current system I have studied-the Virtual Academic Advisor-have also driven the need for a highly efficient and concise system architecture. In my research, I propose a non-deterministic machine learning-driven architecture that aims to reduce the complexity of this academic scheduling problem through a standardized set of generalized capabilities. High-level components of the Virtual Academic Advisor-the current system my work revolves around-were first analyzed, refactored, and redefined to address inconsistent terminology. A two-phase Natural Language Processing (NLP) and Neural Network-based recommender system is then proposed and integrated into the newly organized architecture. NLP allows us to match students' preferences and schedules to existing schedules for a given term in the academic year, and its output enables further simplified parsing before providing recommended schedules for a given student's request. Other problems addressed to compliment the new architecture include database architecture redefinitions to accommodate recurrent system processes, synthetic data creation, neural network feature selection, and input parameter definitions. The new proposed architecture, including the two-phase recommender system and related research previously mentioned, may enable more focused research and development, and ultimately guide continued developments to a demonstrable proof-of-concept non-deterministic system with highly understandable documentation and efficient configurability.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/jadon-combs.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/jadon-combs.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

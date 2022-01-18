@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Luo Leng</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>Software Engineering Internship at TechLent</h1>
+
+            <!-- Project type -->
+            <h2>TechLent Inc.</h2>
+            <h2>Advisor: Dr. Min Chen</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "During my internship at Techlent Inc, I developed several web services to facilitate SQL and Python trainings. Throughout, I worked with a small team of software developers and participated in daily standups. My role in this team was a full-stack developer. I mainly used Python Flask Framework to build microservices that allow users to practice their coding skills. After developing the microservices with auto-grading and performance analysis functionalities, the time cost for question reviews is significantly reduced to 10%. After the services were completed, I encapsulated PostgreSQL databases and practice services into Docker containers. For more efficient use of system resources, I learned to deploy the web services to Kubernetes on Google Cloud Platform (GCP) and connected it with Techlent Platform. My current job is learning end to end testing. I am planning to set up an automatic test service with Team city so that the development team can monitor and analyze the performance of the entire platform.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/luo-leng.png">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/luo-leng.png">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <title>Computing & Software Systems Capstone Colloquium</title>
+    <link rel="stylesheet" href="abstract-page.css">
+</head>
+
+<body> 
+    <header>
+
+        <section class="logo">
+            <a href="https://www.uwb.edu/stem"><img src="../../images/web-white-left-school-signature-uw-bothell.png" alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <section class="event-title">
+            <h1>Division of Computing & Software Systems</h1>
+            <h2>March 19, 2021</h2>
+        </section>
+        
+    </header>
+    
+    <section class="styled-center-heading">
+
+        <!-- Student name -->
+        <h1>Jeramie Castillo</h1>
+
+        <figure></figure>
+
+    </section>
+
+    <section class="presentation">
+
+        <section class="project-title-purple">
+
+            <!-- Project title -->
+            <h1>TalluUP: All-In-One Inventory + Expense Management Tool</h1>
+
+            <!-- Project type -->
+            <h2>Individual Project-Student Defined</h2>
+            <h2>Advisor: Dr. Marc Dupius</h2>
+            
+        </section>
+
+        <article class="text">
+            <u>Abstract</u>
+            <p id="abstract"></p>
+        </article>
+
+        <!-- Add line breaks to abstract using JavaScript -->
+        <script>
+            // Copy and paste the student's abstract inside the quotation marks of input
+            let input = "The number of handmade goods and product reselling businesses exponentially increased during this pandemic despite a vulnerable economic landscape. As these businesses grow, owners are more likely to look for management tools and resources to support their business model. Many small business owners prefer Microsoft Excel to manage their inventory due to its simplicity and flexibility, however, the program lacks dynamic data analytics and insight features. This can hinder a business's productivity due to a need for self-research and analysis. For myself -- and many others --, owning a clothing business has always required a need for organization, accounting, and budgeting. Thus, developing an application with features like automated data entry and insights can increase capital gain for businesses.This capstone focuses on building a combined inventory management and expense tracking tool made for small e-commerce business owners and secondhand sellers. The purpose of this application is to solve pain points for small business owners through a more transferable and customizable interface for different company types. This means owners have full control on how the application is used - allowing small Etsy shops or sneaker/clothing resellers to configure this tool to fit their unique inventory type.This project follows an agile software development approach to ensure target goals and requirements continuously evolve and reflect the sponsor's needs. This required learning new full-stack development skills such as HTML, CSS, and server hosting to create an optimized website. Furthermore, this project demonstrates my strengths in user research, design, and programming. My goal is to provide users a hassle-free tool with data analysis resources and automation features without the complication of commercial management applications.";
+
+            let regex = /\.[A-z]/g;
+            let found = input.match(regex);
+            let output;
+            
+            if (found) {
+                let foundstr = found.toString();
+                let linebreak = ".<br/><br/>"
+                let replacement = linebreak.concat(foundstr.substr(-1));
+                output = input.replace(regex, replacement);
+            } else {
+                output = input;
+            }           
+            document.getElementById("abstract").innerHTML = output;
+        </script>
+
+        <!-- Poster image -->
+        <figure>
+            <img src="../../computer-software-systems/css-posters/jeramie-castillo.jpg">
+        </figure>
+
+        <ul>
+            <a href="../../computer-software-systems/css-posters/jeramie-castillo.jpg">
+                <li>
+                    <h3>View full-sized poster</h3>
+                </li>
+            </a>
+        </ul>
+
+        
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,443 @@
+body {
+    /* background-color: #FFFFF4; */
+    background-color: white;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* UW Bothell logo */
+header {
+    background-color: #4b2e83;    
+    height: 70px;
+    padding: 30px;
+    /* text-align: center; */
+}
+
+/* UW Bothell logo */
+header .logo {
+    /* background-color: black; */
+    background-image: url("../images/web-white-left-school-signature-uw-bothell.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 30px;
+    width: 500px;
+    padding: 20px;
+    text-indent: -10000000px;
+    margin: auto;
+    /* margin-left: 5%; */
+} 
+
+.headings {
+    background-color:hsl(0, 0%, 90%);
+    /* color: #4b2e83; */
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: medium;
+    margin: 50 10% 0 10%;
+}
+
+/* Winter 2021 Capstone Colloquium */
+.headings h1 {
+    text-transform: uppercase;
+    font-family: EncodeSans-black;
+    height: 20px;
+}
+
+/* Date of colloquium */
+.headings h2 {
+    font-family: UniSans;
+    font-size: 20px;
+}
+
+.heading-1, .heading-1-center {
+    font-family: EncodeSans-black;
+    margin: 80px 10% -20px 10%;
+    font-size: 15px;
+
+}
+
+.heading-1 figure {
+    background-image: url(https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/98/2014/10/07214122/Bar_RtAngle_7502.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 300px;
+    margin-left: -3px;
+}
+
+.heading-1-center figure {
+    background-image: url(https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/98/2014/10/07214122/Bar_RtAngle_7502.png);
+    /* background-image: url(https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/98/2014/10/07214124/Bar_RtAngle_2685.png); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 300px;
+    margin-left: -3px;
+}
+
+.heading-1-center {
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.heading-1-center figure {
+    width: 500px;
+    height: 16px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: -40px;
+    
+}
+
+.text {
+    font-family: OpenSans;
+    margin: 0px 15% 80px 15%;
+    size: 20px;
+    /* text-align: center; */
+}
+
+.text a:hover, .large-text a:hover {
+    text-decoration: underline;
+    color: #b7a57a;
+}
+
+.text a:active, .text a:visited, text a:link, .large-text a:active, .large-text a:visited {
+    text-decoration: none;
+}
+
+.zoom-link {
+    font-family: EncodeSans-regular;
+    font-size: 20px;
+    margin: -5px 0 20px 0;
+}
+
+/* .zoom-link:hover {
+    text-decoration: underline;
+    color: #85754d;
+} */
+
+
+.time {
+    font-family: EncodeSans-medium;
+    font-size: 20px;
+    /* text-align: center; */
+    /* margin: 50px 0 0 14.5%; */
+    margin: 30px 10% 0 10%;
+}
+
+.time figure {
+    background-image: url(https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/98/2014/10/07214124/Bar_RtAngle_2685.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 240px;
+    margin-left: -3px;
+    margin-bottom: -10px;
+}
+
+.presentation-row, .zoom-link-row {
+    text-align: center;
+    margin: 25px 10% 150px 10%;
+}
+
+
+.presentation-row ul, .zoom-link-row ul {
+    /* display: inline-flex; */
+    display: flex;
+    list-style-type: none;
+    font-family: EncodeSans-medium; 
+}
+
+.presentation-row li, .zoom-link-row li {
+    /* border-top: 2px solid #000; */
+    /* border-bottom: 2px solid #000; */
+    margin: auto;
+    height: 380px;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+.zoom-link-row li {
+    height: 150px;
+}
+
+/* 
+.middle-column {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+} */
+
+.first-column {
+    /* border-left: 2px solid #000; */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+
+.last-column {
+    /* border-right: 2px solid #000; */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Room number */
+.room {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+    color: white;
+    background-color: #4b2e83;
+    /* background-color: #85754d; */
+}
+
+.room a:link {
+    text-decoration: none!important;
+    color: white;
+}
+
+.room a:visited {
+    text-decoration: none!important;
+    color: white;
+}
+
+.room a:active {
+    text-decoration: none!important;
+    color: white;
+}
+
+.room:hover {
+    /* color: #e8e3d3; */
+    color:hsl(0, 0%, 90%);
+    text-decoration: underline;
+    /* opacity: 90%; */
+}
+
+.presentation-row figure img {
+    border: 1px solid gray;
+    height: 140px;
+    margin: auto;
+    /* margin-left: -13px; */
+    text-align: center;
+    max-width: 230px;
+}
+
+.presentation-row figure img:hover {
+    opacity: 0.5;
+    border: 2px solid gray;
+}
+
+.presentation-row h1 {  /* student name */
+    font-size: 16px;
+    color: #4b2e83;
+
+}
+
+.presentation-row h2 {  /*project title */
+    font-size: 15px;
+    margin: -5px 15px 0 15px;
+}
+
+/* .presentation-row h2:hover {
+    text-decoration: underline;
+    color: #85754d;
+} */
+
+.spacing {  /* space between title and type */
+    /* background-color: red; */
+    height: 60px;
+    /* padding-bottom: min(40px);
+    padding-bottom: max(48px); */
+}
+
+.spacing-2 {
+    height: 30px;
+}
+
+.presentation-row p {   /* project type */
+    font-size: 15px;
+}
+
+footer {
+    /* background-color: red; */
+    background-image: url(https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/98/2017/06/07212352/BoundlessBand_LeftAngleWordmarkW-HEX.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 300px;
+    float: right;
+    height: 50px;
+    margin: 100px 0 50px 0;
+}
+
+
+/* Responsive rules */
+@media screen and (max-width: 1570px) {
+
+    .time {
+        margin-left: 60px;
+    }
+
+    .presentation-row, .zoom-link-row {
+        text-align: center;
+        margin: 15px 10% 90px 5px;
+    }
+
+    .room {
+        border-radius: 0;
+    }
+    
+    .presentation-row li, .zoom-link-row li {
+        flex: 1 0 0px;
+        width: 290px;
+        height: 390px;
+        box-shadow: none;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        border-radius: 0px;
+    }
+
+    .zoom-link-row li {
+        height: 150px;
+    }
+    
+    .presentation-row figure img {
+        margin-top: 8px;
+        /* margin-left: -15px; */
+        height: 140px;
+        max-width: 220px;
+    }
+        
+    .middle-column {
+        border-left: 0.5px solid #000;
+        border-right: 0.5px solid #000;
+    }
+
+    .first-column {
+        border-left: 2px solid #000;
+        border-right: 0.5px solid #000;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;        
+    }
+
+    .last-column {
+        border-right: 2px solid #000;
+        border-left: 0.5px solid #000;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .spacing {
+        height: 50px;
+    }
+}
+
+.announcement-purple {
+    background-color: #4b2e83;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white; 
+    margin: 80px 20% 140px 20%;
+    padding: 40px;
+    text-align: center;
+}
+
+.announcement-purple h1 {
+    font-family: EncodeSans-bold;
+    font-size: 22px;
+    margin: 15px 5% 15px 5%;
+}
+
+.announcement-purple h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.announcement-purple:hover, .announcement-purple h1 a:hover {
+    color: #b7a57a !important;
+}
+
+.large-text {
+    text-align: center;
+    font-family: EncodeSans-medium;
+    /* font-family: OpenSans; */
+    margin: 0px 15% 80px 15%;
+    font-size: 17px;
+    height: 100px;
+    line-height: 30px;
+}
+
+/* 
+@media screen and (max-width: 1400px) {
+    body {
+        background-color: gray;
+    }
+
+    .presentation-row li {
+        box-shadow: none;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+    }
+    
+    
+    .middle-column {
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        border-radius: 0;
+    }
+
+    .first-column {
+        border-left: 2px solid #000;
+        border-right: 1px solid #000;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;        
+    }
+
+    .last-column {
+        border-right: 2px solid #000;
+        border-left: 1px solid #000;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+*/
+
+@font-face {
+    font-family: 'EncodeSans-black';
+    src: url('../fonts/EncodeSans/EncodeSansNormal-900-Black.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-bold';
+    src: url('../fonts/EncodeSans/EncodeSansNormal-700-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-medium';
+    src: url('../fonts/EncodeSans/EncodeSansNormal-500-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-regular';
+    src: url('../fonts/EncodeSans/EncodeSansNormal-400-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-light';
+    src: url('../fonts/EncodeSans/EncodeSansNormal-200-ExtraLight.ttf')
+}
+
+@font-face {
+    font-family: 'UniSans';
+    src: url('../fonts/UniSans/Fontfabric - UniSansBook.otf');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans/Open Sans regular.ttf');
+}
