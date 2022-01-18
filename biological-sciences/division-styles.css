@@ -1,0 +1,264 @@
+body {
+    /* background-color: #FFFFF4; */
+    background-color: white;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* UW Bothell logo */
+.logo {
+    background-color: #4b2e83;
+    height: 70px;
+    text-align: center;
+    padding: 20px;
+}
+
+.event-title {
+    background-color:hsl(0, 0%, 90%);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Name of division */
+.event-title h1 {
+    text-transform: uppercase;
+    font-family: EncodeSans-black;
+    height: 20px;
+}
+
+/* Date */
+.event-title h2 {
+    font-family: UniSans;
+    font-size: 20px;
+}
+
+.styled-heading, .styled-center-heading {
+    font-family: EncodeSans-black;
+    margin: 80px 10% -20px 10%;
+    font-size: 15px;
+
+}
+
+.styled-heading figure, .styled-center-heading figure {
+    background-image: url(https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/98/2014/10/07214122/Bar_RtAngle_7502.png);
+    /* background-image: url(https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/98/2014/10/07214124/Bar_RtAngle_2685.png); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 300px;
+    margin-left: -3px;
+}
+
+.styled-center-heading {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.styled-center-heading figure {
+    width: 500px;
+    height: 16px;
+    margin: auto;
+}
+
+.text {
+    font-family: OpenSans;
+    margin: 0px 15% 0 15%;
+    size: 20px;
+    /* text-align: center; */
+}
+
+.zoom-link {
+    font-family: EncodeSans-regular;
+    font-size: 18px;
+    margin: -5px 0 20px 0;
+}
+
+.zoom-link a:link {
+    text-decoration: underline;
+    color: black;
+}
+
+.zoom-link a:active, .zoom-link a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.zoom-link a:hover {
+    text-decoration: underline;
+    color: #85754d;
+}
+
+
+.zoom-password {
+    font-family: EncodeSans-regular;
+    font-size: 16px;
+    margin: -5px 0 20px 0;
+}
+
+.symposium-time {
+    font-family: EncodeSans-regular;
+    font-size: 17px;
+    margin: -5px 10px 20px 0;
+}
+.presentation {
+    margin: 80px 20% 140px 20%;
+    padding-bottom: 40px;
+    text-align: center;
+    /* box-shadow: 3px 3px 3px 3px gray; */
+    /* border-radius: 5px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.announcement {
+    margin: 80px 20% 140px 20%;
+    /*padding-bottom: 40px;*/
+    text-align: center;
+    /* box-shadow: 3px 3px 3px 3px gray; */
+    /* border-radius: 5px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+
+.project-title-gold {
+    background-color: #e8e3d3;
+    padding: 10px 20px 10px 20px;
+}
+
+.project-title-purple {
+    background-color: #4b2e83;
+    /* background-color: #85754d; */
+    padding: 10px 20px 10px 20px;
+    color: white; 
+    margin-bottom: 40px;
+}
+
+.project-title-metallic-gold {
+    background-color: #85754d;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Project title */
+.project-title-purple h1, .project-title-gold h1, .project-title-metallic-gold h1 {
+    font-family: EncodeSans-bold;
+    font-size: 22px;
+    margin: 15px 5% 15px 5%;
+}
+
+/* Time of presentation */
+.project-title-purple h2, .project-title-gold h2, .project-title-metallic-gold h2 {
+    font-family: EncodeSans-light;
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+/* Student names and majors */
+.presentation ul {
+    list-style-type: none; /* Remove bullets */
+    /* text-align: center; */
+    margin: 30px 13% 30px 13%;
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-content: space-between;
+    font-family: EncodeSans-medium;  
+}
+
+/* Mentors/Advisors */
+.project-title-purple h3, .project-title-gold h3, .project-title-metallic-gold h3 {
+    font-family: EncodeSans-light;
+    font-weight: lighter;
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+.presentation li {
+    /* border: 3px solid gray; */
+    background-color: hsl(0, 0%, 94%);
+    border: 1px solid gray;
+    margin: auto;
+    width: 150px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                   0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.presentation li h3 {
+    font-size: 15px;
+    color: #4b2e83;
+}
+
+.presentation li h4 {
+    margin-top: -6px;
+    font-size: 14px;
+    font-family: 'EncodeSans-light';
+    font-weight: lighter;
+    color: rgb(87, 85, 85);
+}
+
+.presentation li p {
+    margin-top: -15px;
+    font-size: 13px;
+    color: rgb(124,124,124);
+}
+
+.presentation figure {
+    margin: 20px 10% 20px 10%;
+}
+
+/* Poster image */
+.presentation figure img {
+    border: 1px solid gray;
+    display: block;
+    margin: auto;
+    height: auto;
+    max-width: 80%;
+    /* margin: 20px 20px 20px 20px; */
+}
+
+footer {
+    /* background-color: red; */
+    background-image: url(https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/98/2017/06/07212352/BoundlessBand_LeftAngleWordmarkW-HEX.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 300px;
+    float: right;
+    height: 50px;
+    margin: 100px 0 50px 0;
+}
+
+
+@font-face {
+    font-family: 'EncodeSans-black';
+    src: url('../fonts/EncodeSans/EncodeSansNormal-900-Black.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-bold';
+    src: url('../fonts/EncodeSans/EncodeSansNormal-700-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-medium';
+    src: url('../fonts/EncodeSans/EncodeSansNormal-500-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-regular';
+    src: url('../fonts/EncodeSans/EncodeSansNormal-400-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-light';
+    src: url('../fonts/EncodeSans/EncodeSansNormal-200-ExtraLight.ttf')
+}
+
+@font-face {
+    font-family: 'UniSans';
+    src: url('../fonts/UniSans/Fontfabric - UniSansBook.otf');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans/Open Sans regular.ttf');
+}
