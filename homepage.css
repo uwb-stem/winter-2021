@@ -1,0 +1,234 @@
+body {
+    background-color: white;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* UW Bothell logo */
+.logo {
+    background-color: #4b2e83;
+    height: 70px;
+    text-align: center;
+    padding: 20px;
+}
+
+.event-title {
+    background-color:hsl(0, 0%, 90%);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Winter 2021 Capstone Colloquium */
+.event-title h1 {
+    text-transform: uppercase;
+    font-family: EncodeSans-black;
+    height: 20px;
+}
+
+/* Date */
+.event-title h2 {
+    font-family: UniSans;
+    font-size: 20px;
+}
+
+.styled-heading {
+    font-family: EncodeSans-black;
+    margin: 80px 10% 0 10%;
+    font-size: 15px;
+}
+
+.styled-heading figure {
+    background-image: url(https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/98/2014/10/07214122/Bar_RtAngle_7502.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 400px;
+    margin-left: -3px;
+}
+
+.programs {
+    /* background-color:hsl(0, 0%, 85%); */
+    background-color: hsl(60, 100%, 98%);
+    color: red;
+    padding: 80px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 10% 60px 10%;
+    box-shadow: 3px 3px 3px 3px gray;
+    font-family: EncodeSans-bold;
+    font-size: 15px;
+}
+
+.programs figure {
+    color: black;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    /* top: 20px; */
+    
+}
+
+.programs figure img {
+    width: 200px;
+    margin: auto;
+    margin-top: -40px;
+    /* background-color: red; */
+}
+
+
+.programs figure:hover {
+    opacity: 90%;
+}
+
+.programs figcaption {
+    color: white;
+    width: 180px;
+    margin: auto;
+    /* margin-top: -50px; */
+}
+
+.long-caption figcaption {
+    margin-top: -57px;
+    font-family: EncodeSans-bold;
+    font-size: 14px;
+}
+
+.short-caption figcaption {
+    margin-top: -50px;
+}
+
+@media screen and (max-width: 1570px) { 
+    .programs {
+        padding: 60px 50px;
+    }
+    
+    .programs figure img {
+        width: 180px;
+        margin: auto;
+        margin-top: -40px;
+        /* background-color: red; */
+    }
+
+    .long-caption figcaption, .short-caption figcaption {
+        margin-top: -52px;
+        font-family: EncodeSans-bold;
+        font-size: 12.5px;
+    }
+
+    .short-caption figcaption {
+        margin-top: -45px;
+    }
+}
+
+.sponsors {
+    margin: 0px 10% 0 10%;
+    
+}
+
+.sponsors p {  
+    font-family: OpenSans;
+    font-size: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.sponsors figure img {
+    size: 120px;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.sponsors ul {
+    display: flex;
+    font-family: EncodeSans-medium;  
+    font-size: 30px;
+    list-style-type: none; /* Remove bullets */
+    margin-top: -2px;
+    text-align: center;
+    /* flex-direction: row; */
+}
+
+/* Add spacing between the list items */
+.sponsors li {
+    margin: auto;
+}
+
+/* Responsive rule for when screen-size is smaller thatn 1570px */
+@media screen and (max-width: 1570px) { 
+    .sponsors ul {
+        font-size: 25px;
+        /* color: red; */
+    }
+
+    .sponsors li {
+        flex: 1 0 0px;
+    }
+}
+
+@media screen and (max-width: 1250px) { 
+    .sponsors ul {
+        font-size: 20px;
+        /* color: blue; */
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    .sponsors ul {
+        display: inline-block;
+        font-size: 20px;
+        /* color: green; */
+    }
+    
+    .sponsors li {
+        margin: 5px;        
+    }
+}
+
+footer {
+    /* background-color: red; */
+    background-image: url(https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/98/2017/06/07212352/BoundlessBand_LeftAngleWordmarkW-HEX.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 300px;
+    float: right;
+    height: 50px;
+    margin: 100px 0 50px 0;
+}
+
+@font-face {
+    font-family: 'EncodeSans-black';
+    src: url('./fonts/EncodeSans/EncodeSansNormal-900-Black.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-bold';
+    src: url('./fonts/EncodeSans/EncodeSansNormal-700-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-medium';
+    src: url('./fonts/EncodeSans/EncodeSansNormal-500-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-regular';
+    src: url('./fonts/EncodeSans/EncodeSansNormal-400-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'EncodeSans-light';
+    src: url('./fonts/EncodeSans/EncodeSansNormal-200-ExtraLight.ttf')
+}
+
+@font-face {
+    font-family: 'UniSans';
+    src: url('./fonts/UniSans/Fontfabric - UniSansBook.otf');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./fonts/OpenSans/Open Sans regular.ttf');
+}
